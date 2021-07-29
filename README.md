@@ -25,6 +25,8 @@ words, it’s extremely interesting and important.
 library(hexwords)
 ## basic example code
 op <- par(mar = rep(0, 4), bg = "darkgrey")
+## we don't sort in the package data object but why not here
+english_hex <- sort(english_hex)
 plot(seq_along(english_hex), col = sprintf("#%s", english_hex), pch = 19, cex = 5, asp = 1, ylim = c(-0.2, length(english_hex) + 0.2), xlim = c(0, length(english_hex)  + 1), xlab = "", ylab = "", axes = F)
 text(seq_along(english_hex), lab = english_hex, srt = 15, cex = 0.9, pos = 4, offset = 1)
 ```
